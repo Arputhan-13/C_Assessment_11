@@ -1,0 +1,24 @@
+#include <stdio.h>
+void memcpy(int *src,int *dst,int size)
+{
+    int i;
+    for(i=0;i<size;i++)
+    {
+    *dst=*src;
+    src++;
+    dst++;
+    }
+}
+int main()
+{
+    int src[5]={10,20,30,40,50};
+    int dst[5];
+    int i;
+    memcpy(src,dst,5);
+    printf("Copied Elements:\n");
+    for(i=0;i<5;i++)
+    {
+    printf("%d ",dst[i]);
+    }
+    return 0;
+}
